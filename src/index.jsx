@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Layout/header.jsx';
+import Footer from './components/Layout/footer.jsx';
 import Home from './pages/Home/home';
 import About from './pages/About/about';
 import Product from './pages/Product/product';
@@ -19,6 +21,7 @@ root.render(
           <Route path="/hebergement" element={<Product/>}/>
           <Route path="*" element={<Error />}/>
       </Routes>
+      <Footer/>
     </Router>
   </React.StrictMode>
 );
