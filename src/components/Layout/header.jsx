@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import logo from '../../assets/logos/kasa.png';
+import logo from '../../assets/logos/kasa-pink.png';
 
 function Header() {
     const current = useLocation().pathname;
