@@ -1,0 +1,17 @@
+.gallery {
+    background-color: $color-grey;
+    border-radius: 25px;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 50px;
+    padding: 50px;
+
+    @media (max-width: $mobile) {
+        background-color: $color-white;
+        gap: 20px;
+        grid-template-columns: none;
+        margin-top: 20px;
+        padding: 0;
+    }
+}
