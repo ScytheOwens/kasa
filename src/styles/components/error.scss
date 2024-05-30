@@ -6,6 +6,10 @@
         color: $color-pink;
         font-size: 13.5rem;
         font-weight: 700;
+
+        @media (max-width: $mobile) {
+            font-size: 5rem;
+        }
     }
 
     .error-text {
@@ -13,6 +17,10 @@
         font-size: $font-size-2x;
         font-weight: 500;
         margin-top: 8.5rem;
+
+        @media (max-width: $mobile) {
+            font-size: $font-size-large;
+        }
     }
 
     .error-link {
@@ -21,5 +29,9 @@
         font-weight: 500;
         margin-top: 8.5rem;
         text-decoration: underline;
+
+        @media (max-width: $mobile) {
+            font-size: $font-size-small;
+        }
     }
 }
