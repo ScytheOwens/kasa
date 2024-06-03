@@ -1,0 +1,65 @@
+.dropbox {
+    margin: 38px auto 0 auto;
+    max-width: 85%;
+
+    @media (max-width: $mobile) {
+        margin-top: 19px;
+        max-width: none;
+    }
+
+    .dropbox-item {
+        margin-top: 38px;
+
+        @media (max-width: $mobile) {
+            margin-top: 19px;
+        }
+
+        .dropbox-item-input {
+            display: none;
+
+            &:checked {
+                + .dropbox-item-title .dropbox-item-title-label img {
+                    transform: rotate(180deg);
+                }
+
+                ~ .dropbox-item-content {
+                    display: block;
+                }
+            }
+        }
+
+        .dropbox-item-title {
+            background-color: $color-pink;
+            border-radius: 5px;
+            font-size: $font-size-larger;
+            padding: 10px 20px 10px 15px;
+
+            @media (max-width: $mobile) {
+                font-size: $font-size-small;
+            }
+
+            .dropbox-item-title-label {
+                align-items: center;
+                color: $color-white;
+                display: flex;
+                justify-content: space-between;
+    
+                &:hover {
+                    cursor: pointer;
+                }
+
+                > img {
+                    @media (max-width: $mobile) {
+                        height: 0.6rem;
+                    }
+                }
+            }
+        }
+
+        .dropbox-item-content {
+            background-color: $color-grey;
+            display: none;
+            padding: 10px 15px;
+        }
+    }
+}
