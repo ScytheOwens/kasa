@@ -4,7 +4,6 @@ import Gallery from '../../components/Gallery';
 import Card from '../../components/Card';
 import bannerMedia from '../../assets/images/shore.png';
 import accomodations from '../../var/accomodations.json';
-import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -14,10 +13,11 @@ function Home() {
         mediaUrl={ bannerMedia }
         mediaDescription="Photographie de falaises"
       />
+
       <Gallery
         items={accomodations.map(item =>
           <Card
-            key={ item.id }
+            id={ item.id }
             title={ item.title }
             slug={ item.title }
             mediaUrl={ item.cover }

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 function Gallery({items}) {
     return (
         <ul className="gallery">
-            { items.map(item =>
-                <li className="gallery-item" key={ item.id }>
+            { items.map((item, index) =>
+                <li className="gallery-item" key={"gallery-item-" + index}>
                     { item }
                 </li>
             )}
@@ -12,8 +12,8 @@ function Gallery({items}) {
     )
 }
 
-// Gallery.Prototypes = {
-//     children: PropTypes.object.isRequired,
-// }
+Gallery.Prototypes = {
+    children: PropTypes.array.isRequired,
+}
 
 export default Gallery;
