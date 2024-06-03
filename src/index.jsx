@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Layout/header.jsx';
 import Footer from './components/Layout/footer.jsx';
-import Home from './pages/Home/home';
-import About from './pages/About/about';
-import Product from './pages/Product/product';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Product from './pages/Product/Product';
 import Error from './components/Error';
 import './App.scss';
 import reportWebVitals from './reportWebVitals';
@@ -17,10 +17,10 @@ root.render(
       <Header/>
       <main>
         <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/a-propos" element={<About/>}/>
-            <Route path=":slug" element={<Product/>}/>
-            <Route path="*" element={<Error />}/>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/a-propos" element={<About/>}/>
+          <Route path=":slug" element={<Product/>}/>
+          <Route path="*" element={<Error/>}/>
         </Routes>
       </main>
       <Footer/>
