@@ -1,0 +1,59 @@
+.presentation {
+    .presentation-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 25px;
+
+        .presentation-content-left {
+            .presentation-content-left-title {
+                color: $color-pink;
+                font-size: 36px;
+                font-weight: 500;
+            }
+
+            .presentation-content-left-text {
+                font-size: $font-size-large;
+                font-weight: 500;
+            }
+
+            .presentation-content-left-tags {
+                column-gap: 10px;
+                display: flex;
+                margin-top: 15px;
+
+                .presentation-content-left-tags-tag {
+                    background-color: $color-pink;
+                    border-radius: 10px;
+                    color: $color-white;
+                    font-size: $font-size-small;
+                    font-weight: 700;
+                    padding: 2px 0;
+                    text-align: center;
+                    width: 7rem;
+                }
+            }
+        }
+
+        .dropbox {
+            display: grid;
+            column-gap: 4.5rem;
+            grid-template-columns: repeat(2, 1fr);
+            flex-basis: 100%;
+            margin-top: 15px;
+            max-width: none;
+
+            .dropbox-item {
+                margin: 0;
+
+                .dropbox-item-title {
+                    font-size: $font-size-large;
+                }
+
+                .dropbox-item-content {
+                    line-height: 1.5rem;
+                }
+            }
+        }
+    }
+}
