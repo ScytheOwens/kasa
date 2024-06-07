@@ -1,0 +1,18 @@
+.avatar {
+    align-items: center;
+    column-gap: 10px;
+    display: flex;
+    text-align: right;
+    width: 10.5rem;
+
+    .avatar-name {
+        color: $color-pink;
+        font-size: $font-size-large;
+    }
+
+    .avatar-media {
+        border-radius: 50%;
+        height: 4rem;
+        width: 4rem;
+    }
+}
