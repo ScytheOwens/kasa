@@ -1,0 +1,9 @@
+.about-content {
+    margin: 38px auto 0 auto;
+    max-width: 85%;
+
+    @media (max-width: $mobile) {
+        margin-top: 19px;
+        max-width: none;
+    }
+}

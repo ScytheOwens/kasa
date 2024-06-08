@@ -88,7 +88,7 @@
             }
         }
 
-        .dropbox {
+        .collapse {
             display: grid;
             column-gap: 4.5rem;
             grid-template-columns: repeat(2, 1fr);
@@ -101,10 +101,10 @@
                 grid-template-columns: none;
             }
 
-            .dropbox-item {
+            .collapse-item {
                 margin: 0;
 
-                .dropbox-item-title {
+                .collapse-item-title {
                     font-size: $font-size-large;
 
                     @media (max-width: $mobile) {
@@ -112,7 +112,7 @@
                     }
                 }
 
-                .dropbox-item-content {
+                .collapse-item-content {
                     line-height: 1.5rem;
 
                     @media (max-width: $mobile) {

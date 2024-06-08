@@ -1,0 +1,45 @@
+.collapse {
+    margin-top: 38px;
+
+    @media (max-width: $mobile) {
+        margin-top: 19px;
+    }
+
+    .collapse-title {
+        align-items: center;
+        background-color: $color-pink;
+        border-radius: 5px;
+        color: $color-white;
+        display: flex;
+        font-size: $font-size-larger;
+        justify-content: space-between;
+        padding: 10px 20px 10px 15px;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:not(:only-child) {
+            > img {
+                transform: rotate(-180deg);
+            }
+        }
+
+        @media (max-width: $mobile) {
+            font-size: $font-size-small;
+        }
+
+        > img {
+            transition: transform 500ms;
+
+            @media (max-width: $mobile) {
+                height: 0.6rem;
+            }
+        }
+    }
+
+    .collapse-content {
+        background-color: $color-grey;
+        padding: 10px 15px;
+    }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "../../components/Banner";
-import Dropbox from "../../components/Dropbox";
+import Collapse from "../../components/Collapse";
 import bannerMedia from "../../assets/images/mountains.png";
 import policy from "../../var/policy.json";
 
@@ -12,9 +12,16 @@ function About() {
                 mediaDescription="Photographie de montagnes"
             />
 
-            <Dropbox
-                items={ policy }
-            />
+            <div className="about-content">
+                { policy.map((item, title) => {
+                    return(
+                        <Collapse key={ title }
+                            item={ item }
+                        />
+                    )
+                })}
+            </div>
+            
         </React.Fragment>
     )
 }

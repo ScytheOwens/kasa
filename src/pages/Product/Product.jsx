@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Error from "../../components/Error";
 import Slideshow from "../../components/Slideshow";
 import Avatar from "../../components/Avatar";
-import Dropbox from "../../components/Dropbox";
+import Collapse from "../../components/Collapse";
 import accomodations from "../../var/accomodations.json";
 import greyStar from "../../assets/icons/star-grey.svg";
 import pinkStar from "../../assets/icons/star-pink.svg";
@@ -12,27 +12,27 @@ function Product() {
     const { slug } = useParams();
     const product = accomodations.find(accomodation => accomodation.title == slug);
 
-    const items = [
-        {
-            "title": "Description",
-            "content": product.description
-        },
-        {
-            "title": "Equipments",
-            "content": product.equipments
-        }
-    ]
-
-    let rating = [];
-    for (let i = 0; i < 5; i++) {
-        if (i < product.rating) {
-            rating.push(pinkStar)
-        } else {
-            rating.push(greyStar)
-        }
-    }
-
     if (product) {
+        const items = [
+            {
+                "title": "Description",
+                "content": product.description
+            },
+            {
+                "title": "Equipments",
+                "content": product.equipments
+            }
+        ]
+    
+        let rating = [];
+        for (let i = 0; i < 5; i++) {
+            if (i < product.rating) {
+                rating.push(pinkStar)
+            } else {
+                rating.push(greyStar)
+            }
+        }
+
         return (
             <article className="presentation">
                 <Slideshow
@@ -60,9 +60,16 @@ function Product() {
                             })}
                         </div>
                     </div>
-                    <Dropbox
-                        items={items}
-                    />
+
+                    <div className="presentation-content-collapse">
+                        { items.map((item, title) => {
+                            return(
+                                <Collapse key={ title }
+                                    item={ item }
+                                />
+                            )
+                        })}
+                    </div>
                 </section>
             </article>
         )
