@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useState } from "react";
 import { ArrowPrev, ArrowNext } from "./arrow";
 
@@ -7,14 +8,10 @@ function Slideshow({mediaList}) {
 
     return(
         <div className="slideshow">
-            <ArrowPrev
-                action={slidePrev}
-            />
+            { mediaCount > 1 ? <ArrowPrev action={slidePrev}/> : null }
             <img src={ mediaList[media] } alt="Photographie du logement" className="slideshow-slide"/>
-            <div className="slideshow-count">{media + 1}/{mediaCount}</div>
-            <ArrowNext
-                action={slideNext}
-            />
+            { mediaCount > 1 ? <div className="slideshow-count">{media + 1}/{mediaCount}</div> : null }
+            { mediaCount > 1 ? <ArrowNext action={slideNext}/> : null }
         </div>
     )
 
@@ -33,6 +30,10 @@ function Slideshow({mediaList}) {
             setMedia(media + 1);
         }
     }
+}
+
+Slideshow.ProtoTypes = {
+    mediaList: PropTypes.array.isRequired
 }
 
 export default Slideshow;

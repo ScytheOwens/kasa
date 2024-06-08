@@ -88,23 +88,23 @@
             }
         }
 
-        .collapse {
+        .presentation-content-collapse {
             display: grid;
             column-gap: 4.5rem;
             grid-template-columns: repeat(2, 1fr);
             flex-basis: 100%;
             margin-top: 15px;
             max-width: none;
-
+    
             @media (max-width: $mobile) {
                 gap: 20px;
                 grid-template-columns: none;
             }
 
-            .collapse-item {
+            .collapse {
                 margin: 0;
 
-                .collapse-item-title {
+                .collapse-title {
                     font-size: $font-size-large;
 
                     @media (max-width: $mobile) {
@@ -112,7 +112,7 @@
                     }
                 }
 
-                .collapse-item-content {
+                .collapse-content {
                     line-height: 1.5rem;
 
                     @media (max-width: $mobile) {
