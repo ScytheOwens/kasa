@@ -41,5 +41,9 @@
     .collapse-content {
         background-color: $color-grey;
         padding: 10px 15px;
+
+        @media (max-width: $mobile) {
+            padding-inline: 20px;
+        }
     }
 }

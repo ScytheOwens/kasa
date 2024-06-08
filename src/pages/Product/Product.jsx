@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import Error from "../../components/Error";
 import Slideshow from "../../components/Slideshow";
 import Avatar from "../../components/Avatar";
@@ -75,7 +75,7 @@ function Product() {
         )
     } else {
         return (
-            <Error/>
+            <Navigate to="*"/>
         )
     }
 }
