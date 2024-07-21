@@ -1,0 +1,29 @@
+.card {
+    display: block;
+    line-height: 0;
+    position: relative;
+
+    .card-media {
+        border-radius: 10px;
+        height: 21.5rem;
+        object-fit: cover;
+        width: 100%;
+
+        @media (max-width: $mobile) {
+            height: 16rem;
+        }
+    }
+
+    .card-title {
+        background: linear-gradient(180deg, transparent, #00000080);
+        border-radius: 10px;
+        bottom: 0;
+        color: $color-white;
+        font-size: $font-size-large;
+        font-weight: 700;
+        line-height: normal;
+        padding: 20px;
+        position: absolute;
+        width: calc(100% - 40px);
+    }
+}

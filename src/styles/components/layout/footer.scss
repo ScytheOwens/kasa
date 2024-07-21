@@ -1,0 +1,19 @@
+footer {
+    background-color: $color-black;
+    padding: 45px 0 20px 0;
+    text-align: center;
+
+    @media (max-width: $mobile) {
+        padding: 45px 0;
+    }
+
+    .footer-legals {
+        color: $color-white;
+        font-size: $font-size-larger;
+        margin-top: 20px;
+
+        @media (max-width: $mobile) {
+            font-size: $font-size-smaller;
+        }
+    }
+}

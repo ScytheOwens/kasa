@@ -1,0 +1,37 @@
+.error {
+    padding: 5rem 0;
+    text-align: center;
+
+    .error-title {
+        color: $color-pink;
+        font-size: 13.5rem;
+        font-weight: 700;
+
+        @media (max-width: $mobile) {
+            font-size: 5rem;
+        }
+    }
+
+    .error-text {
+        color: $color-pink;
+        font-size: $font-size-2x;
+        font-weight: 500;
+        margin-top: 8.5rem;
+
+        @media (max-width: $mobile) {
+            font-size: $font-size-large;
+        }
+    }
+
+    .error-link {
+        display: block;
+        font-size: $font-size-large;
+        font-weight: 500;
+        margin-top: 8.5rem;
+        text-decoration: underline;
+
+        @media (max-width: $mobile) {
+            font-size: $font-size-small;
+        }
+    }
+}
