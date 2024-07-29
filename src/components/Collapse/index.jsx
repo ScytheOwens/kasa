@@ -6,15 +6,15 @@ function Collapse({ item }) {
     const [open, setOpen] = useState(false);
 
     return(
-        <section className="collapse">
+        <section className={ open ? "collapse open" : "collapse" }>
             <h2 className="collapse-title" onClick={collapse}>{item.title}<img src={ chevronIcon } className="collapse-title-icon"/></h2>
             {Array.isArray(item.content) ?
-                open && <ul className="collapse-content">
+                <ul className="collapse-content">
                     {item.content.map((element, index) =>
                         <li key={"element-" + index}>{element}</li> 
                     )}
                 </ul> :
-                open && <p className="collapse-content">{item.content}</p>
+                <p className="collapse-content">{item.content}</p>
             }
         </section>
     )

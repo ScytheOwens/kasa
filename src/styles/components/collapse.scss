@@ -1,6 +1,19 @@
 .collapse {
     margin-top: 38px;
 
+    &.open {
+        .collapse-title > img {
+            transform: rotate(-180deg);
+        }
+
+        .collapse-content {
+            height: max-content;
+            padding-block: 10px;
+            transform: scaleY(1);
+            transition: all 400ms ease-in-out;
+        }
+    }
+
     @media (max-width: $mobile) {
         margin-top: 19px;
     }
@@ -19,12 +32,6 @@
             cursor: pointer;
         }
 
-        &:not(:only-child) {
-            > img {
-                transform: rotate(-180deg);
-            }
-        }
-
         @media (max-width: $mobile) {
             font-size: $font-size-small;
         }
@@ -40,7 +47,11 @@
 
     .collapse-content {
         background-color: $color-grey;
-        padding: 10px 15px;
+        height: 0;
+        padding: 0 15px;
+        transform: scaleY(0);
+        transform-origin: left top;
+        transition: all 400ms ease-in-out;
 
         @media (max-width: $mobile) {
             padding-inline: 20px;
