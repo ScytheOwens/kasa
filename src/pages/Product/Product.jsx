@@ -9,8 +9,8 @@ import greyStar from "../../assets/icons/star-grey.svg";
 import pinkStar from "../../assets/icons/star-pink.svg";
 
 function Product() {
-    const { slug } = useParams();
-    const product = accomodations.find(accomodation => accomodation.title == slug);
+    const { id } = useParams();
+    const product = accomodations.find(accomodation => accomodation.id == id);
 
     if (product) {
         const items = [
@@ -19,7 +19,7 @@ function Product() {
                 "content": product.description
             },
             {
-                "title": "Equipments",
+                "title": "Equipements",
                 "content": product.equipments
             }
         ]
