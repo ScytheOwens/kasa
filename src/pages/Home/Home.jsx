@@ -19,7 +19,6 @@ function Home() {
           <Card
             id={ item.id }
             title={ item.title }
-            slug={ item.title }
             mediaUrl={ item.cover }
             mediaDescription={ item.title }
           />
